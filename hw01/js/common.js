@@ -1,7 +1,13 @@
 
 //sidebar
 $("#burger").on("click", function () {
-	$(".content aside").toggleClass("aside-hide");
+	if ($(".content aside").attr("style") != "display: none;")
+	$(".content aside, .content aside *").hide("slow");
+	else {
+		$(".content aside *").attr("style", "");
+		$(".content aside").show("slow");
+	}
+	//$(".content aside").toggleClass("aside-hide");
 });
 
 //changing font size for <p> in .middle-content

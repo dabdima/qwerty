@@ -121,10 +121,10 @@ html, body {
 				float: left;
 				margin-right: 20px;
 			}
-			.aside-hide {
+			/* .aside-hide {
 				position: absolute;
 				left: -9999px;
-			}
+			} */
 
 			.right, .left {
 				margin-top: 20px;
@@ -171,7 +171,7 @@ html, body {
 						    margin-top: 10px;
 							}
 						}
-	
+
 				@media screen and (max-width: 590px){
 					header .logo{margin: 10px auto;}
 					header .slogan{position: static; text-align: center;}
