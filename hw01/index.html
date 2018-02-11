@@ -37,7 +37,7 @@
         </div>
       </div>
     </header>
-    <section>
+    <section class="middle-content">
       <h6 class="hidden">content and sidebar</h6>
       <div class="content line">
         <div class="wrapper">
@@ -57,10 +57,26 @@
                   <input type="button" name="send1" value="Register"/>
                 </div>
               </form>
-			  <p><label for="fontsize">Change font size</label></p>
-			  <input type="text" name="login" value="" size="3" maxlength="2" id="fontsize" />
-			  <p><label for="bg_col">Background #******</label></p>
-			  <input type="text" name="login" value="" size="6" maxlength="6" id="bg_col" />
+              <div class="row">
+        			  <p><label for="fontsize">Font size 8-24 (content)</label></p>
+        			  <input type="text" name="login" value="" size="3" maxlength="2" id="fontsize" />
+              </div>
+              <div class="row">
+        			  <p><label for="bg_col">Background #******</label></p>
+        			  <input type="text" name="login" value="" size="6" maxlength="6" id="bg_col" />
+              </div>
+              <div class="row">
+        				<p><label for="font_family">Font(for full page)</label></p>
+        				<select name="font" size="1" id="font_family">
+        					<option value="1">sans-serif</option>
+        					<option value="2">serif</option>
+        					<option value="3">ubuntu</option>
+        					<option value="4">days</option>
+        				</select>
+        			</div>
+              <div class="row">
+                <input id="delete_p" type="button" name="delete_p" value="Delete the last p"/>
+              </div>
             </div>
             <div class="col fl-r">
               <p class="h3">Menu2</p>
@@ -70,6 +86,8 @@
                 <li><a href="#">Labore et dolore</a></li>
                 <li><a href="#">Consequat</a></li>
                 <li><a href="#">Sint occaecat</a></li>
+                <li><a href="#">Ullamco</a></li>
+                <li><a href="#">Voluptate velit esse</a></li>
               </ul>
             </div>
             <div class="clear"></div>
@@ -77,16 +95,19 @@
           <section class="right">
             <h6 class="hidden">content</h6>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-			<p>Lorem ipsum dolor sisectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+            <p>Lorem ipsum dolor sisectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             <p>Lorem ipsum dolor sit amet, consectetumod tempor inc dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
             <p>Lorem ipsum dolor ur adipiscing elimpor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-			<p>Lorem ipsum dolor siolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            <p>Lorem ipsum dolor sit amet.</p>
-			<p>Lorem ipsum dolor ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            Lorem ipsum dolor sit amet.</p>
-			<p>Lorem ipsum dolor siolore magna aliqua. Ut enim ad minim veniam, quis nostripsum dolor siolore magnaipsum dolor siolore magnaud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-            Lorem ipsum dolor sit amet.</p>
-          </section>
+            <p>Lorem ipsum dolor siolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Lorem ipsum dolor sit amet.
+            </p>
+            <p>Lorem ipsum dolor ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Lorem ipsum dolor sit amet.
+            </p>
+            <p>Lorem ipsum dolor siolore magna aliqua. Ut enim ad minim veniam, quis nostripsum dolor siolore magnaipsum dolor siolore magnaud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Lorem ipsum dolor sit amet.
+            </p>
+            </section>
           <div class="clear"></div>
         </div>
       </div>
