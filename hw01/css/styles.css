@@ -1,0 +1,121 @@
+
+/*коментарий*/
+
+section {display: block; }
+.hidden {display: none;}
+p{line-height: 1.4;}
+
+html, body {
+	height: 100%;
+	line-height: 20px;
+	font-family: OpenSans-Regular, Arial;
+	font-size: 15px;
+	color: #000;}
+
+	a{text-decoration: none; ontline: none;}
+	a img {border: none; outline: none;}
+	ul {list-style: none;}
+	p {margin: 0 0 14px;}
+
+	.clear {clear: both;}
+
+	.line {width: 100%; background: #E5F4ED;}
+	.wrapper {max-width: 960px; margin: 0 auto; height: 100%; position: relative;
+		padding: 0 20px;  overflow: hidden; position: relative;}
+
+		.header {min-height: 140px; background: #B3E0CA;}
+		.menu {height: 50px; background: #68C196;}
+		.content {min-height: 450px;}
+		.footer {min-height: 50px; background: #68C196;}
+
+		header {color: #093620;}
+		header .logo {
+			width: 100px;
+			height: 100px;
+			background: url(../img/logo.png) center no-repeat;
+			background-size: 100%;
+			margin-top: 20px;}
+
+			header .slogan{position: absolute; top: 40px; left: 140px;}
+			header .slogan .title{font-size: 30px; padding: 10px 0;}
+			header .slogan .subtitle{font-size: 16px; }
+
+			header nav a {
+				color: inherit;
+			}
+
+
+			header nav ul li {
+				display: inline-block;
+				margin: 0 20px;
+				height: 50px;
+				line-height: 50px;
+			}
+
+			header nav .show_menu {
+				height: 50px;
+				line-height: 50px;
+				cursor: pointer;
+				display: none;
+				text-align: center;
+			}
+
+
+			.content aside {
+				width: 20%;
+				float: left;
+				margin-right: 20px;
+			}
+			.aside-hide {
+				position: absolute;
+				left: -9999px;
+			}
+
+			.right, .left {
+				margin-top: 20px;
+				margin-bottom: 20px;
+			}
+			
+			.content .right {
+				overflow: hidden;
+			}
+			form .row {
+				margin-bottom: 15px;
+			}
+			footer  {
+				color: #093620;
+				line-height: 50px;
+				text-align: center;
+			}
+			
+			
+#burger, .wrapper ul {
+	display: inline-block;
+}
+
+			
+			
+			@media screen and (max-width: 1024px){
+				header nav ul {text-align: center;}
+				.content aside {float: none;
+					max-width: 500px;
+					min-width: 340px;
+					margin: 0 auto;}
+					.content aside .col.fl-l{float: left; margin-top: 20px; margin-bottom: 20px;}
+					.content aside .col.fl-r{float: right; margin-top: 20px; margin-bottom: 20px;}
+					.content .right{padding: 10px;}
+					footer {text-align: center;}
+				}
+				@media screen and (max-width: 590px){
+					header .logo{margin: 10px auto;}
+					header .slogan{position: static; text-align: center;}
+					header .menu{height: auto;}
+				}
+				@media screen and (max-width: 510px){
+					.content .stars{width: 245px;}
+					.content aside .col.fl-l{float: none;}
+					.content aside .col.fl-r{float: none;}
+					.content aside p.h3{font-size: 25px;}
+					.content aside a{font-size: 20px;}
+				}
+			}
