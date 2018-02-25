@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+ <html lang="en">
+  <head>
+   <title>FirebaseAuthForWeb</title>
+   <meta charset="UTF-8">
+
+   <link rel="stylesheet" href="css/reset.css" type="text/css" />
+  <link href="css/styles.css" rel="stylesheet" type="text/css" />
+  <script type="text/javascript" src="libs/jquery-1.7.1.min.js"></script>
+
+ </head>
+ <!-- ИНИЦИАЛИЗАЦИЯ FIREBASE НАЧАЛО. ВСТАВЬТЕ СВОЙ КОД ИЗ КОНСОЛИ FIREBASE СЮДА-->
+ <script src="https://www.gstatic.com/firebasejs/4.10.0/firebase.js"></script>
+ <script>
+   // Initialize Firebase
+   var config = {
+     apiKey: "AIzaSyDfC5Abs-_45ppyjvvhens2FkABwYSw0y0",
+     authDomain: "test01-11693.firebaseapp.com",
+     databaseURL: "https://test01-11693.firebaseio.com",
+     projectId: "test01-11693",
+     storageBucket: "test01-11693.appspot.com",
+     messagingSenderId: "1015102393263"
+   };
+   firebase.initializeApp(config);
+ </script>
+ <!-- ИНИЦИАЛИЗАЦИЯ FIREBASE КОНЕЦ.-->
+
+  <!--Код ниже инициализирует виджет для логина с помощью FirebaseUI  -->
+ <script src="https://cdn.firebase.com/libs/firebaseui/1.0.0/firebaseui.js"></script>
+   <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/1.0.0/firebaseui.css" />
+   <script type="text/javascript">
+    var uiConfig = {
+     signInSuccessUrl: 'loggedIn.html',
+     signInOptions: [
+      // Указываем провайдеров для Firebase Аутентификации
+      firebase.auth.GoogleAuthProvider.PROVIDER_ID,
+      firebase.auth.EmailAuthProvider.PROVIDER_ID
+     ],
+     // Здесь вы можете специфировать условия к использованию, которые будут показаны при виджете
+     tosUrl: '<your-tos-url>'
+    };
+    // Инициализирум FirebaseUI виджет
+    var ui = new firebaseui.auth.AuthUI(firebase.auth());
+    // Для начала методы мы подождем пока html полностью загрузиться
+    ui.start('#firebaseui-auth-container', uiConfig);
+ </script>
+ <!-- Здесь можно поставить фоновую картинку и сообщение  -->
+  <div></div>
+  <body>
+
+
+
+        <div id="wraper">
+          <header>
+            <div class="header line">
+              <div class="wrapper">
+                <div class="logo"></div>
+                <div class="slogan">
+                  <div class="title">LOREMUS</div>
+                  <div class="subtitle">Lorem ipsum</div>
+                </div>
+              </div>
+            </div>
+            <div class="menu line">
+              <div class="wrapper">
+                <nav>
+                  <div class="show_menu">MENU</div>
+      			<input id="burger" type="button" name="burger" value="Burger"/>
+                  <ul>
+                    <li><a href="#">Main</a></li>
+                    <li><a href="#">About us</a></li>
+                    <li><a href="#">Products</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contacts</a></li>
+                  </ul>
+                </nav>
+              </div>
+            </div>
+          </header>
+          <section class="middle-content">
+            <h6 class="hidden">content and sidebar</h6>
+            <div class="content line">
+              <div class="wrapper">
+                <aside class="left">
+                  <div class="col fl-l">
+
+                    <!-- <h1 align="center">Firebase Аутентификация для Web(in public)</h1> -->
+                     <div id="firebaseui-auth-container"></div>
+                    <!-- <form action="#" method="post">
+                      <div class="row">
+                        <p><label for="label">Login</label></p>
+                        <input type="text" name="login" value="" size="20" maxlength="10" id="label" />
+                      </div>
+                      <div class="row">
+                        <p><label for="password1">Password</label></p>
+                        <input type="password" name="password" id="password1" />
+                      </div>
+                      <div class="row">
+                        <input type="button" name="send" value="Sing In"/>
+                        <input type="button" name="send1" value="Register"/>
+                      </div>
+                    </form> -->
+
+                    <!-- <div class="row">
+              			  <p><label for="fontsize">Font size 8-24 (content)</label></p>
+              			  <input type="text" name="login" value="" size="3" maxlength="2" id="fontsize" />
+                    </div>
+                    <div class="row">
+              			  <p><label for="bg_col">Background #******</label></p>
+              			  <input type="text" name="login" value="" size="6" maxlength="6" id="bg_col" />
+                    </div>
+                    <div class="row">
+              				<p><label for="font_family">Font(for full page)</label></p>
+              				<select name="font" size="1" id="font_family">
+              					<option value="1">sans-serif</option>
+              					<option value="2">serif</option>
+              					<option value="3">ubuntu</option>
+              					<option value="4">days</option>
+              				</select>
+              			</div>
+                    <div class="row">
+                      <input id="delete_p" type="button" name="delete_p" value="Delete the last p"/>
+                    </div> -->
+
+                  </div>
+
+                  <div class="col fl-r">
+                    <p class="h3">Menu2</p>
+                    <ul>
+                      <li><a href="#">Lorem ipsum1</a></li>
+                      <li><a href="#">Eiusmod tempor</a></li>
+                      <li><a href="#">Labore et dolore</a></li>
+                      <li><a href="#">Consequat</a></li>
+                      <li><a href="#">Sint occaecat</a></li>
+                      <li><a href="#">Ullamco</a></li>
+                      <li><a href="#">Voluptate velit esse</a></li>
+                    </ul>
+                  </div>
+                  <div class="clear"></div>
+                </aside>
+                <section class="right">
+                  <h6 class="hidden">content</h6>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sisectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetumod tempor inc dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor ur adipiscing elimpor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                  <p>Lorem ipsum dolor siolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    Lorem ipsum dolor sit amet.
+                  </p>
+                  <p>Lorem ipsum dolor ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    Lorem ipsum dolor sit amet.
+                  </p>
+                  <p>Lorem ipsum dolor siolore magna aliqua. Ut enim ad minim veniam, quis nostripsum dolor siolore magnaipsum dolor siolore magnaud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                    Lorem ipsum dolor sit amet.
+                  </p>
+                  </section>
+                <div class="clear"></div>
+              </div>
+            </div>
+          </section>
+          <footer>
+            <div class="footer line">
+              <div class="wrapper">
+                <span>&copy; All rights reserved, 2018</span>
+              </div>
+            </div>
+          </footer>
+        </div>
+        <script type="text/javascript" src="js/common.js"></script>
+
+  </body>
+ </html>
